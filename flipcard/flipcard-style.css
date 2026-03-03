@@ -23,6 +23,8 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+
+/* Không gian thẻ */
 .flip-card {
     background-color: transparent;
     width: 300px;
@@ -30,6 +32,8 @@ body{
     perspective: 1000px;
     margin: 50px auto;
 }
+
+/* Nội dung thẻ */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -38,6 +42,8 @@ body{
     transition: transform 1.2s;
     transform-style: preserve-3d;
 }
+
+/* Mặt trước và mặt sau của thẻ */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -48,15 +54,18 @@ body{
     align-items: center;
     color: #bfbfbf;
 }
+/* Mặt trước của thẻ */
 .flip-card-front {
     background: linear-gradient(to bottom right, rgb(203, 203, 203), rgb(89, 0, 0));
     border: 2px solid rgb(24, 0, 89);
 }
+/* Mặt sau của thẻ + transformm ngược nội dung */
 .flip-card-back {
     background: linear-gradient(to bottom right, rgb(170, 170, 170), rgb(24, 0, 89));
     border: 2px solid rgb(89, 0, 0);
     transform: rotateY(180deg);
 }
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
